@@ -1,6 +1,10 @@
 require 'twilio-ruby'
 
 class NotificationsController < ApplicationController
+  before_action :authenticate_user!, except: [:create]
+
+  def index
+  end
 
   def create
     to = params['to']

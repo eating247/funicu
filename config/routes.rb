@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   }
 
   root 'messages#index'
-  resources :messages
-  resources :notifications
+  resources :dashboards, only: [:index]
+  resources :messages, only: [:index, :create]
+  resources :notifications, only: [:index, :create]
 end
