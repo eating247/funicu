@@ -1,0 +1,32 @@
+<div class="row">
+  <%= form_tag method: :post, class: "col s12" do %>
+
+    <div class="row">
+      <div class="input-field col s6 offset-s3">
+        <%= text_field_tag(
+            :message,
+            params[:message],
+            placeholder: "Your Note",
+            class: 'center'
+        ) %>    
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6 offset-s3">
+        <%= text_field_tag(
+            :to,
+            params[:to],
+            placeholder: "Phone Number",
+            class: 'center'
+        ) %>    
+      </div>
+    </div>
+
+
+    <div class="center">
+      <%= submit_tag "Send Your Note!",  class: "waves-effect waves-light btn-large" %>
+    </div>
+    
+  <% end %>
+</div>

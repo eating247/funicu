@@ -1,11 +1,14 @@
-<h3 class="center">Message Board</h3>
+<h3>
+  <i class="small material-icons">assignment</i>
+  Message Board
+</h3>
 
 <table class="bordered highlight">
   <tbody>
     <% @messages.each do |message| %>
       <tr>
         <td>
-          <b><%= message.context %></b>
+          <b><%= message.context %></b> &nbsp;
           <i><%= time_ago_in_words(message.created_at) %> ago</i>
         </td>
       </tr>

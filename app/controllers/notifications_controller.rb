@@ -3,7 +3,7 @@ require 'twilio-ruby'
 class NotificationsController < ApplicationController
   before_action :authenticate_user!, except: [:create]
 
-  def index
+  def new
   end
 
   def create
