@@ -1,5 +1,12 @@
 <nav>
-  <%= link_to "Send a message!", notifications_path %>
-  <%= link_to "Your message board", messages_path %>
-  <%= link_to "Dashboard", dashboards_path %>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">funicu</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to "Send a Note", notifications_path %></li>
+      <li><%= link_to "Your Journal", messages_path %></li>
+    </ul>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><li><%= link_to "Dashboard", dashboards_path %></li></li>
+    </ul>
+  </div>
 </nav>

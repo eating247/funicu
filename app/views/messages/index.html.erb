@@ -1,11 +1,14 @@
-<h1>Say something to the internet:</h1>
+<h3 class="center">Your Journal</h3>
 
 
-<table>
+<table class="bordered highlight">
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= time_ago_in_words(message.created_at) %>: <%= message.context %></td>
+        <td>
+          <b><%= message.context %></b>
+          <i><%= time_ago_in_words(message.created_at) %> ago</i>
+        </td>
       </tr>
     <% end %>
   </tbody>
