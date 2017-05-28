@@ -12,7 +12,6 @@ class MessagesController < ApplicationController
 
   def create
     puts params["From"][2..-1]
-    # TODO: stop hardcode-processing phone number
     user = User.find_by(phone_number: params["From"][2..-1])
     context = params['Body']
     message = user.messages.new(context: context.to_s)
