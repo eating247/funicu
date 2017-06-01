@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'ruby' '~> 2.3'
 gem 'materialize-sass'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,6 +40,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'twilio-ruby'
 gem 'whenever', :require => false
 gem 'react-rails'
+
+group :production do
+  'rails_12factor'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
